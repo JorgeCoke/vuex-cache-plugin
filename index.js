@@ -32,7 +32,7 @@ module.exports = function VuexCachePlugin(configTimeExpiration) {
             }
             // END Spread Operator Alternative
             var vuexDispatchCacheConfig = args[args.length - 1];
-            if (vuexDispatchCacheConfig.enableVuexDispatchCache) {
+            if (vuexDispatchCacheConfig.enableVuexCachePlugin) {
                 if (vuexDispatchCacheConfig.clearAllCache) {
                     clearCache();
                 }

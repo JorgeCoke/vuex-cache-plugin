@@ -40,7 +40,7 @@ this.$store.dispatch('user/FETCH_USERS', OPTIONS);
 
 ```
   {
-    enableVuexDispatchCache: set to TRUE to enable the cache plugin for the current dispatch [Type: boolean, optional - Default: FALSE]
+    enableVuexCachePlugin: set to TRUE to enable the cache plugin for the current dispatch [Type: boolean, optional - Default: FALSE]
     clearAllCache: set to TRUE to clear all cache before the current dispatch [Type: boolean, optional - Default: FALSE]
     forceRefreshCache: set to TRUE to refresh the current cache for the current dispatch [Type: boolean, optional - Default: FALSE]
     timeExpiration: custom TIME_EXPIRATION for the current dispatch (in millis) [Type: boolean, optional - Default: TIME_EXPIRATION_CONFIG]
@@ -72,20 +72,20 @@ this.$store.dispatch('user/FETCH_USERS'); // This dispatch won't be saved in cac
 ...
 
 this.$store.dispatch('user/FETCH_USERS', {
-  enableVuexDispatchCache: true,
+  enableVuexCachePlugin: true,
 }); // This dispatch will be saved in cache for 30000 millis
 
 ...
 
 this.$store.dispatch('user/FETCH_USERS', {
-  enableVuexDispatchCache: true,
+  enableVuexCachePlugin: true,
   timeExpiration: 60000
 }); // This dispatch will be saved in cache for 60000 millis
 
 ...
 
 this.$store.dispatch('user/FETCH_USERS', {
-  enableVuexDispatchCache: true,
+  enableVuexCachePlugin: true,
   forceRefreshCache: true
 }); // This dispatch will be executed despite been saved in cache recently (the new result will override the current cache)
 ```
