@@ -1,0 +1,28 @@
+{
+  "name": "vuex-cache-plugin",
+  "version": "1.0.0",
+  "description": "Simplest Cache Pulgin for Vuex",
+  "main": "index.min.js",
+  "scripts": {
+    "build": "uglifyjs index.js --compress --mangle -o index.min.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JorgeCoke/vuex-cache-plugin.git"
+  },
+  "keywords": [
+    "vuex",
+    "cache",
+    "plugin"
+  ],
+  "author": "Jorge Martinez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/JorgeCoke/vuex-cache-plugin/issues"
+  },
+  "homepage": "https://github.com/JorgeCoke/vuex-cache-plugin#readme",
+  "devDependencies": {
+    "uglify-js": "^3.4.8"
+  }
+}
