@@ -32,7 +32,7 @@ module.exports = function VuexCachePlugin(configTimeExpiration) {
             }
             // END Spread Operator Alternative
             var vuexDispatchCacheConfig = args[args.length - 1];
-            if (vuexDispatchCacheConfig.enableVuexCachePlugin) {
+            if (vuexDispatchCacheConfig && vuexDispatchCacheConfig.enableVuexCachePlugin) {
                 if (vuexDispatchCacheConfig.clearAllCache) {
                     clearCache();
                 }
@@ -46,7 +46,7 @@ module.exports = function VuexCachePlugin(configTimeExpiration) {
                     return CACHE[KEY].data;
                 } else {
                     var dataCache = CACHE[KEY];
-                    if (dataCache.timestamp > new Date().getTime() - dataCache.timeExpiration) {
+                    if (dataCache && dataCache.timestamp > new Date().getTime() - dataCache.timeExpiration) {
                         return dataCache.data;
                     } else {
                         CACHE[KEY] = {

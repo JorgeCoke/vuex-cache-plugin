@@ -1,6 +1,6 @@
 {
   "name": "vuex-cache-plugin",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Simplest Cache Pulgin for Vuex",
   "main": "index.min.js",
   "scripts": {
